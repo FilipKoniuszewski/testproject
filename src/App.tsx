@@ -1,7 +1,9 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
-import RegisterModal from "./Components/RegisterModal";
-import Button from "./Components/Button";
+// @ts-ignore
+import RegisterModal from "./Components/RegisterModal.tsx";
+// @ts-ignore
+import Button from "./Components/Button.tsx";
 import "./Styles/App.scss";
 
 const App = () => {
