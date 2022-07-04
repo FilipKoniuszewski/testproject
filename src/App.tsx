@@ -4,7 +4,7 @@ import RegisterModal from "./Components/RegisterModal";
 import Button from "./Components/Button";
 import "./Styles/App.scss";
 
-function App() {
+const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
