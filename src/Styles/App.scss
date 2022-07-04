@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Roboto:ital,wght@0,400;1,700&display=swap');
+﻿@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Roboto:ital,wght@0,400;1,700&display=swap");
 
 $mainGradient: orange;
 $fontFamily: "Roboto", sans-serif;
@@ -39,10 +39,9 @@ body {
 }
 
 .open-modal-button:hover {
-  background: #FF7B86;
+  background: #ff7b86;
   cursor: pointer;
   color: $neutralWhite;
-  
 }
 
 .opened {
@@ -56,7 +55,7 @@ body {
 }
 
 .inactive-button {
-  background: #FF7B86 !important;
+  background: #ff7b86 !important;
   cursor: none;
 }
 
@@ -71,7 +70,8 @@ body {
   top: 30%;
   left: 50%;
   user-select: none;
-  
+  z-index: 1000;
+
   .register-modal__content {
     text-align: center;
     padding: 1.5rem;
@@ -96,16 +96,10 @@ body {
     border-radius: 0 0 1rem 1rem;
     padding: 0.7rem 0;
   }
-  
+
   .close-modal-button:hover {
     cursor: pointer;
-    background: #FF7B86;
+    background: #ff7b86;
     color: $neutralWhite;
   }
-
-
 }
-
-
-
-
