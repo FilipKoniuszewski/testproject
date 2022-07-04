@@ -21,11 +21,10 @@ const App = () => {
     <div className="App">
       <div
         data-testid="wrapper"
-        className={`wrapper ${isModalOpen && "bg-modal-open"}`}
+        className='wrapper'
       >
         <Button
-          isModalOpen={isModalOpen}
-          size={Size.medium}
+          size={Size.small}
           onOpen={onOpen}
           className="open-modal-button"
           content={isModalOpen ? "You clicked me!" : "Click me!"}

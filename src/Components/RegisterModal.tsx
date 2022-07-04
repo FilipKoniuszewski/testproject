@@ -14,33 +14,36 @@ interface ModalProps {
 
 const RegisterModal = ({
   onClose,
+  isModalVisible,
   header,
   paragraph,
   accent,
-  isModalVisible,
-}) => {
+}: ModalProps) => {
   if (!isModalVisible) return null;
 
   return (
-    <ClickAwayListener onClickAway={onClose}>
-      <div data-testid="modal-1" className="register-modal">
-        <div className="register-modal__content">
-          <IconContext.Provider value={{ color: accent, size: "1.5em" }}>
-            <AiOutlineInfoCircle />
-          </IconContext.Provider>
-          <h3 className="register-modal__header">{header}</h3>
-          <p className="register-modal__info">{paragraph}</p>
+    <>
+      <div className="overlay"></div>
+      <ClickAwayListener onClickAway={onClose}>
+        <div data-testid="modal-1" className="register-modal">
+          <div className="register-modal__content">
+            <IconContext.Provider value={{ color: accent, size: "1.5em" }}>
+              <AiOutlineInfoCircle />
+            </IconContext.Provider>
+            <h3 className="register-modal__header">{header}</h3>
+            <p className="register-modal__info">{paragraph}</p>
+          </div>
+          <button
+            style={{ color: `${accent}` }}
+            data-testid="close-modal-1"
+            onClick={onClose}
+            className="close-modal-button"
+          >
+            Close
+          </button>
         </div>
-        <button
-          style={{ color: `${accent}` }}
-          data-testid="close-modal-1"
-          onClick={onClose}
-          className="close-modal-button"
-        >
-          Close
-        </button>
-      </div>
-    </ClickAwayListener>
+      </ClickAwayListener>
+    </>
   );
 };
 

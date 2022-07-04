@@ -17,7 +17,6 @@ const Button: FC<ButtonProps> = ({
   onOpen,
   className,
   size,
-  isModalOpen,
   content,
 
 }) => {
@@ -30,7 +29,6 @@ const Button: FC<ButtonProps> = ({
 
   return (
     <button
-      disabled={isModalOpen}
       data-testid="button-1"
       onClick={onOpen}
       className={`${className} ${buttonStyle}`}
