@@ -28,14 +28,28 @@ body {
 }
 
 .open-modal-button {
-  border-radius: 2rem;
-  padding: 1rem 3rem;
   background: $neutralWhite;
   border: none;
   transition: 0.2s;
   font-weight: 700;
   color: $bgColor;
   user-select: none;
+}
+
+.button--sm {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+}
+.button--md {
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  border-radius: 4rem;
+}
+.button--lg {
+  padding: 3rem 7rem;
+  font-size: 3rem;
+  border-radius: 5rem;
 }
 
 .open-modal-button:hover {
@@ -49,10 +63,10 @@ body {
   opacity: 0.5;
 }
 
-.register-modal-active {
-  opacity: 1 !important;
-  transform: translate(-50%, -40%) !important;
-}
+// .register-modal-active {
+//   opacity: 1 !important;
+//   transform: translate(-50%, -40%) !important;
+// }
 
 .inactive-button {
   background: #ff7b86 !important;
@@ -64,9 +78,9 @@ body {
   border-radius: 1rem;
   position: absolute;
   transition: 100ms ease-in-out;
-  /*transform: translateY(-45px);*/
-  transform: translate(-50%, -50%);
-  opacity: 0;
+  // transform: translateY(-45px);
+  transform: translate(-50%, -30%);
+  animation: 0.2s showModal;
   top: 30%;
   left: 50%;
   user-select: none;
@@ -101,5 +115,17 @@ body {
     cursor: pointer;
     background: #ff7b86;
     color: $neutralWhite;
+  }
+}
+
+@keyframes showModal {
+  0%{
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -30%)
   }
 }

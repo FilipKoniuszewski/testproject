@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mui/base": "^5.0.0-alpha.87",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/testing-react": "^1.3.0",
     "@testing-library/jest-dom": "^5.16.4",
