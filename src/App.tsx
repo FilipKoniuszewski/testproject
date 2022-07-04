@@ -33,7 +33,6 @@ const App = () => {
       </div>
       <RegisterModal
         isModalVisible={isModalOpen}
-        onOpen={onOpen}
         onClose={onClose}
         accent="hsl(356, 100%, 66%)"
         header="Account not created"
